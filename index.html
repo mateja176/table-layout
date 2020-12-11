@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="blank"></div>
+
+      <div class="header-1">
+        <div class="header-1-item header-item">A</div>
+        <div class="header-1-item header-item">B</div>
+        <div class="header-1-item header-item">C</div>
+        <div class="header-1-item header-item">D</div>
+        <div class="header-1-item header-item">E</div>
+        <div class="header-1-item header-item">F</div>
+        <div class="header-1-item header-item">G</div>
+        <div class="header-1-item header-item">H</div>
+        <div class="header-1-item header-item">I</div>
+        <div class="header-1-item header-item">J</div>
+        <div class="header-1-item header-item">K</div>
+        <div class="header-1-item header-item">L</div>
+        <div class="header-1-item header-item">M</div>
+        <div class="header-1-item header-item">N</div>
+        <div class="header-1-item header-item">O</div>
+        <div class="header-1-item header-item">P</div>
+        <div class="header-1-item header-item">Q</div>
+        <div class="header-1-item header-item">R</div>
+        <div class="header-1-item header-item">S</div>
+        <div class="header-1-item header-item">T</div>
+        <div class="header-1-item header-item">U</div>
+        <div class="header-1-item header-item">V</div>
+        <div class="header-1-item header-item">W</div>
+        <div class="header-1-item header-item">X</div>
+        <div class="header-1-item header-item">Y</div>
+        <div class="header-1-item header-item">Z</div>
+      </div>
+
+      <div class="header-2">
+        <div class="header-2-item header-item">0</div>
+        <div class="header-2-item header-item">1</div>
+        <div class="header-2-item header-item">2</div>
+        <div class="header-2-item header-item">3</div>
+        <div class="header-2-item header-item">4</div>
+        <div class="header-2-item header-item">5</div>
+        <div class="header-2-item header-item">6</div>
+        <div class="header-2-item header-item">7</div>
+        <div class="header-2-item header-item">8</div>
+        <div class="header-2-item header-item">9</div>
+        <div class="header-2-item header-item">10</div>
+        <div class="header-2-item header-item">11</div>
+        <div class="header-2-item header-item">12</div>
+        <div class="header-2-item header-item">13</div>
+        <div class="header-2-item header-item">14</div>
+        <div class="header-2-item header-item">15</div>
+        <div class="header-2-item header-item">16</div>
+        <div class="header-2-item header-item">17</div>
+        <div class="header-2-item header-item">18</div>
+        <div class="header-2-item header-item">19</div>
+        <div class="header-2-item header-item">20</div>
+        <div class="header-2-item header-item">21</div>
+        <div class="header-2-item header-item">22</div>
+        <div class="header-2-item header-item">23</div>
+        <div class="header-2-item header-item">24</div>
+        <div class="header-2-item header-item">25</div>
+        <div class="header-2-item header-item">26</div>
+        <div class="header-2-item header-item">27</div>
+        <div class="header-2-item header-item">28</div>
+        <div class="header-2-item header-item">29</div>
+      </div>
+
+      <div class="content" onscroll="handleScroll(event)">
+        <div class="placeholder"></div>
+      </div>
+    </div>
+
+    <script>
+      const header1 = document.querySelector('.header-1');
+      const header2 = document.querySelector('.header-2');
+
+      let lastScrollLeft = 0;
+      /**
+        @type {(e: MouseEvent) => void}
+      */
+      const handleScroll = (e) => {
+        // * scroll y
+        if (e.target.scrollLeft === lastScrollLeft) {
+          header2.scrollTo({ top: e.target.scrollTop });
+          // * scroll x
+        } else {
+          header1.scrollTo({ left: e.target.scrollLeft });
+        }
+
+        lastScrollLeft = e.target.scrollLeft;
+      };
+    </script>
+  </body>
+</html>
